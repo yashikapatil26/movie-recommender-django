@@ -1,12 +1,44 @@
-<div class="row justify-content-center mt-5">
-    {% for movie in movies %}
-        <div class="col-md-3 mb-4">
-            <div class="card h-100 shadow border-0">
-                <img src="{{ movie.poster }}" class="card-img-top" alt="{{ movie.title }}" style="height: 350px; object-fit: cover;">
-                <div class="card-body text-center bg-dark text-white">
-                    <h6 class="card-title mb-0">{{ movie.title }}</h6>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Movie Engine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #141414; color: white; font-family: 'Arial', sans-serif; }
+        .hero { padding: 50px 0; background: #000; border-bottom: 2px solid #e50914; }
+        .movie-card { transition: 0.3s; border: none; background: #222; }
+        .movie-card:hover { transform: scale(1.05); }
+        .btn-danger { background-color: #e50914; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="hero text-center mb-5">
+    <h1 class="display-4 fw-bold">AI Movie Finder</h1>
+    <div class="container mt-4">
+        <form method="GET" class="d-flex justify-content-center">
+            <input type="text" name="movie_name" class="form-control w-50" placeholder="Enter a movie name...">
+            <button type="submit" class="btn btn-danger ms-2">Suggest</button>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for movie in movies %}
+            <div class="col-md-4 mb-4">
+                <div class="card movie-card h-100 shadow">
+                    <img src="{{ movie.poster }}" class="card-img-top" alt="Poster" style="height: 400px; object-fit: cover;">
+                    <div class="card-body text-center text-white">
+                        <h5 class="card-title">{{ movie.title }}</h5>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
+
+</body>
+</html>
