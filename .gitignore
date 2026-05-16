@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Django
+db.sqlite3
+*.sqlite3
+staticfiles/
+media/
+
+# Local/editor
+.vscode/
+.DS_Store
+.env
+
+# Dataset artifacts / accidental downloads
+movies_raw.csv
+movies_raw_files/
+
+# ML artifacts
+movie_engine/artifacts/

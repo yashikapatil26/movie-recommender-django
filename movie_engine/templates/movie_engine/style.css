@@ -1,0 +1,95 @@
+body {
+  background-color: #050a12;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* The Big Background Hero */
+.hero-header {
+  height: 60vh;
+  background:
+    linear-gradient(to bottom, rgba(5, 10, 18, 0.3), #050a12),
+    url("https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 50px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+}
+
+.search-box input:focus {
+  box-shadow: none;
+  background: transparent;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  color: #fff;
+}
+
+/* Movie Card Styling like your Screenshot */
+.movie-card {
+  background: transparent;
+  border: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.poster-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.rating-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #f3ce13;
+  color: #f3ce13;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.movie-info h6 {
+  margin-top: 15px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.movie-meta {
+  font-size: 0.75rem;
+  color: #888;
+}
